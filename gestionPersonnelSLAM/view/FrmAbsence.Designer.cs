@@ -78,7 +78,7 @@
             this.grpAbsence.Controls.Add(this.dtpDebut);
             this.grpAbsence.Location = new System.Drawing.Point(12, 390);
             this.grpAbsence.Name = "grpAbsence";
-            this.grpAbsence.Size = new System.Drawing.Size(776, 214);
+            this.grpAbsence.Size = new System.Drawing.Size(776, 186);
             this.grpAbsence.TabIndex = 2;
             this.grpAbsence.TabStop = false;
             this.grpAbsence.Text = "Gestion des absences";
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 616);
+            this.ClientSize = new System.Drawing.Size(800, 580);
             this.Controls.Add(this.grpAbsence);
             this.Controls.Add(this.grpGestionAbsence);
             this.Name = "FrmAbsence";

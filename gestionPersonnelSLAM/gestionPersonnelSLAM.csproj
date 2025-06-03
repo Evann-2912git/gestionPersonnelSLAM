@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\gestionPersonnelSLAM.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAbsence.cs">
+    <Compile Include="bddManager\BddManager.cs" />
+    <Compile Include="dal\AbsenceAccess.cs" />
+    <Compile Include="dal\Access.cs" />
+    <Compile Include="dal\MotifAccess.cs" />
+    <Compile Include="dal\PersonnelAccess.cs" />
+    <Compile Include="dal\ResponsableAccess.cs" />
+    <Compile Include="dal\ServiceAccess.cs" />
+    <Compile Include="model\Responsable.cs" />
+    <Compile Include="view\FrmAbsence.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAbsence.Designer.cs">
+    <Compile Include="view\FrmAbsence.Designer.cs">
       <DependentUpon>FrmAbsence.cs</DependentUpon>
     </Compile>
+    <Compile Include="model\Absence.cs" />
+    <Compile Include="model\Motif.cs" />
+    <Compile Include="model\Personnel.cs" />
+    <Compile Include="model\Service.cs" />
     <Compile Include="view\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +77,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAbsence.resx">
+    <Compile Include="view\FrmAuthentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAuthentification.Designer.cs">
+      <DependentUpon>FrmAuthentification.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="view\FrmAbsence.resx">
       <DependentUpon>FrmAbsence.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Form1.resx">
@@ -75,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\FrmAuthentification.resx">
+      <DependentUpon>FrmAuthentification.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,10 +115,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bddManager\" />
     <Folder Include="controller\" />
-    <Folder Include="dal\" />
-    <Folder Include="model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
