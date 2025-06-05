@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gestionPersonnelSLAM.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +22,26 @@ namespace gestionPersonnelSLAM.dal
             access = Access.GetInstance();
         }
 
+        public List<Motif> GetMotif()
+        {
+            string req = "SELECT* FROM motif";
+            List<Motif> lstMotif = new List<Motif>();
+            try
+            {
+                List<Object[]> records = access.Manager.ReqSelect(req);
+                foreach (Object[] lstObjet in records)
+                {
+                    Motif motif = new Motif((int)lstObjet[0], (string)lstObjet[1]);
+                    lstMotif.Add(motif);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Environment.Exit(0);
+            }
+            return lstMotif;
+
+        }
     }
 }

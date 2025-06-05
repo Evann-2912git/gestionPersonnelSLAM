@@ -6,6 +6,13 @@ using System.Windows.Forms;
 
 namespace gestionPersonnelSLAM
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    internal class NamespaceDoc
+    {
+
+    }
     internal static class Program
     {
         /// <summary>

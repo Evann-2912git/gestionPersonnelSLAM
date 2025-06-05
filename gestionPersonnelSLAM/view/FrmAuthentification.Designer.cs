@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.txtMdp = new System.Windows.Forms.TextBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
             this.btnSeConnecter = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblMdp = new System.Windows.Forms.Label();
@@ -42,12 +42,13 @@
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
             this.txtLogin.TabIndex = 0;
             // 
-            // txtMdp
+            // txtPwd
             // 
-            this.txtMdp.Location = new System.Drawing.Point(105, 59);
-            this.txtMdp.Name = "txtMdp";
-            this.txtMdp.Size = new System.Drawing.Size(100, 20);
-            this.txtMdp.TabIndex = 1;
+            this.txtPwd.Location = new System.Drawing.Point(105, 59);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(100, 20);
+            this.txtPwd.TabIndex = 1;
+            this.txtPwd.UseSystemPasswordChar = true;
             // 
             // btnSeConnecter
             // 
@@ -85,7 +86,7 @@
             this.Controls.Add(this.lblMdp);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.btnSeConnecter);
-            this.Controls.Add(this.txtMdp);
+            this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtLogin);
             this.Name = "FrmAuthentification";
             this.Text = "FrmAuthentification";
@@ -97,7 +98,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.TextBox txtMdp;
+        private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Button btnSeConnecter;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblMdp;
