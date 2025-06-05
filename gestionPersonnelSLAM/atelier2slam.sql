@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 05 juin 2025 à 20:32
+-- Généré le : jeu. 05 juin 2025 à 20:39
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -93,7 +93,8 @@ INSERT INTO `absence` (`idpersonnel`, `datedebut`, `datefin`, `idmotif`) VALUES
 (49, '2025-02-02 12:50:04', '2025-02-28 10:33:54', 2),
 (50, '2025-02-14 18:40:21', '2025-02-28 04:23:12', 3),
 (0, '2025-06-06 21:53:39', '2025-06-27 21:53:39', 1),
-(0, '2025-06-04 21:54:03', '2025-06-05 21:54:03', 1);
+(0, '2025-06-04 21:54:03', '2025-06-05 21:54:03', 1),
+(0, '2025-06-05 22:37:18', '2025-06-25 22:37:17', 1);
 
 -- --------------------------------------------------------
 
@@ -156,7 +157,6 @@ INSERT INTO `personnel` (`idpersonnel`, `nom`, `prenom`, `tel`, `mail`, `idservi
 (15, 'Anderson', 'Kyle', '06 63 06 62 14', 'nam.tempor@outlook.edu', 1),
 (13, 'Henry', 'Flynn', '07 61 18 05 10', 'egestas@aol.net', 2),
 (1, 'Soto', 'Aline', '01 59 65 51 67', 'sed.facilisis.vitae@hotmail.ca', 1),
-(34, 'Jean ', 'Test', 'troll', 'troll', 2),
 (30, 'Shepard', 'Dacey', '07 56 11 53 59', 'sed.pede.nec@protonmail.org', 2);
 
 -- --------------------------------------------------------

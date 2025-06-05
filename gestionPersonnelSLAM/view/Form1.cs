@@ -55,6 +55,10 @@ namespace gestionPersonnelSLAM
                 FrmAbsence frm = new FrmAbsence(personnel);
                 frm.ShowDialog();
             }
+            else
+            {
+                MessageBox.Show("Une ligne doit-être selectionnée", "Information");
+            }
         }
 
         private void btnAjoutPersonnel_Click(object sender, EventArgs e)
